@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% load my_filters %}
+{% block body_block %}
+<h1>Welcome to index!</h1>
+    <h2>{{ text|cutting:'World' }}</h2>
+    <h2>{{ number }}</h2>
+{% endblock %}

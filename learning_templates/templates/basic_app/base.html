@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="{% url 'basic_app:index' %}">BRAND</a></li>
+            <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+            <li><a class="navbar-link" href="{% url 'basic_app:other' %}">Other</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    {% block body_block %}
+        Anything out of this will be inherited if you extend this!
+    {% endblock %}
+</div>
+</body>
+</html>
